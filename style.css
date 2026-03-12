@@ -1,0 +1,91 @@
+body {
+    background: #121212; /* Dark theme */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Your Main Profile Logo */
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* Circular YouTube look */
+    object-fit: cover;
+    border: 3px solid #0085FF;
+    margin-bottom: 10px;
+}
+
+/* The Buttons */
+.link-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Small Circle Logos inside the buttons */
+.link-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.link-text {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 35px;
+}
+
+/* Add the click animations here */
+.link-card:active {
+    transform: scale(0.95); /* Shrinks the button */
+    filter: brightness(0.9);  /* Makes the color slightly darker/pressed */
+    transition: 0.1s;        /* Makes the 'press' feel instant and snappy */
+}
+
+/* Updated Link Card */
+.link-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    /* This makes every movement smooth (hovering AND clicking) */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a light shadow */
+}
+
+/* The Click Animation */
+.link-card:active {
+    transform: scale(0.92); /* Shrinks slightly more for a 'click' feel */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2); /* Shadow gets smaller when pressed */
+    background-color: #e0e0e0; /* Dulls the white slightly to show it's pressed */
+}
